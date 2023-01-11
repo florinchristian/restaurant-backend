@@ -10,6 +10,4 @@ import java.util.List;
 @Repository
 public interface TableRepository extends JpaRepository<TableModel, Integer> {
 
-    @Override
-    List<TableModel> findAll();
 }

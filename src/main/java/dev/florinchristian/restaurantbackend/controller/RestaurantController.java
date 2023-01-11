@@ -3,6 +3,7 @@ package dev.florinchristian.restaurantbackend.controller;
 import dev.florinchristian.restaurantbackend.model.TableModel;
 import dev.florinchristian.restaurantbackend.repository.TableRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,5 +25,10 @@ public class RestaurantController {
     @GetMapping("/tables")
     public List<TableModel> getTables() {
         return tableRepository.findAll();
+    }
+
+    @PostMapping("/tables")
+    public void createTable() {
+        tableRepository.save(new TableModel());
     }
 }

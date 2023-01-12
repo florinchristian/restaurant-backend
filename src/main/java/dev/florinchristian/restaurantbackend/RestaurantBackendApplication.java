@@ -8,5 +8,4 @@ public class RestaurantBackendApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(RestaurantBackendApplication.class, args);
 	}
-
 }
